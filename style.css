@@ -179,6 +179,10 @@ section {
 
 #servicos {
     background-color: var(--background);
+    padding: 2em 0; /* Adiciona espaçamento nas laterais e no topo */
+    display: flex;
+    flex-direction: column; /* Mantém o título em cima e as caixas abaixo */
+    align-items: center; /* Centraliza todo o conteúdo (título + caixas) */
 }
 
 .header {
@@ -188,26 +192,28 @@ section {
 }
 
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Correção do espaço */
-    gap: 2em;
-    justify-content: center;
+    display: flex; /* Usamos flex para as caixas ficarem lado a lado */
+    justify-content: center; /* Centraliza as caixas na linha */
+    gap: 4em; /* Espaçamento entre as caixas */
+    width: 100%; /* Garantir que ocupe toda a largura disponível */
+    max-width: 1100px; /* Limite de largura máxima para não ficar excessivamente largo */
 }
 
 .box {
     border: 3px solid rgb(49, 49, 49);
     border-radius: 0.5em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Itens dentro da .box continuam empilhados verticalmente */
     justify-content: center;
     overflow: hidden;
-    padding: 1.5em; /* Reduzi o padding */
-    gap: 1.5em;
+    padding: 1.5em;
+    gap: 1em;
     color: white;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    max-width: 400px; /* Defini um tamanho máximo para evitar que fiquem muito largos */
-    margin: auto; /* Centraliza os boxes */
+    max-width: 350px; /* Limita o tamanho máximo das caixas */
+    width: 100%; /* Permite que as caixas se ajustem até o tamanho máximo */
+    box-sizing: border-box; /* Certifica que padding e bordas sejam contados no tamanho total da caixa */
 }
 
 .box:hover {
@@ -223,18 +229,19 @@ section {
 }
 
 .box img {
-    width: 100%; /* Garantir que a imagem ocupe todo o espaço disponível */
+    width: 100%;
     height: auto;
     border-radius: 0.5em;
 }
+
 #contato {
     background-color: var(--second-background);
 } form {
     display: flex;
-    flex-direction: colummn;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
 } form .input-box{
     display: flex;
     flex-direction: column;
@@ -333,7 +340,7 @@ section {
         font-size: 1em;
     }
 }
-@media(max-width:768pc;) {
+@media(max-width:768px) {
     #home h1 {
         font-size: 2.5em;
     } #home h3 {
