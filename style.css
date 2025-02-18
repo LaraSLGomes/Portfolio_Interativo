@@ -96,10 +96,11 @@ section {
     font-weight: 500;
 } 
 .info-box h3 {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 400;
 } 
 .info-box p {
+    font-size: 1.5em;
     opacity: 0.7;
 } 
 .btn-box {
@@ -177,8 +178,44 @@ section {
     font-size: 2.5em;
 }
 
+#curriculo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Garante que o texto dentro da seção também fique centralizado */
+    height: 300px;
+    overflow: hidden; /* Faz com que a seção ocupe toda a altura da tela */
+}
+
+#curriculo p {
+    font-size: 1.8em; /* Aumenta o tamanho da fonte da frase */
+    margin-top: 0.5em; /* Ajusta o espaçamento entre o título e a frase */
+    color: white; /* Cor opcional, se você quiser mudar */
+}
+
+
+.btn-curriculo {
+    padding: 1em 2em;
+    color: white;
+    font-weight: 500;
+    background-color: #3ec5ff; /* Ou qualquer cor que você preferir */
+    border-radius: 0.5em;
+    font-size: 1.4em;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 2em;
+}
+
+.btn-curriculo:hover {
+    background-color: #6cff52;
+}
+
+
 #servicos {
-    background-color: var(--background);
+    background-color: var(--second-background);
     padding: 2em 0;
     display: flex;
     flex-direction: column;
@@ -246,7 +283,7 @@ section {
 }
 
 #contato {
-    background-color: var(--second-background);
+    background-color: var(--background);
 } form {
     display: flex;
     flex-direction: column;
@@ -274,7 +311,7 @@ section {
     justify-content: center;
     gap: 10em;
     bottom: 0;
-    background-color: var(--background);
+    background-color: var(--second-background);
     width: 100%;
     padding: 5em 15%;
 } .col-left {
